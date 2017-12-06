@@ -1,6 +1,15 @@
 <!doctype html>
 <html>
 <head>
+  <style>
+    .pair {
+      display: inline;
+      width: 200px;
+      padding: 10px;
+      border: solid #ccc 1px;
+      vertical-align: middle;
+    }
+  </style>
   <script
     src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
@@ -8,19 +17,42 @@
   <script>
   var cipher = {
     6 : "ab",
-    91 : "ac"
+    91 : "ac",
+    195 : "affaire",
+    392 : "ai",
+    10 : "al",
+    109 : "am",
+    3 : "av",
+    112 : "aug",
+    13 : "aiusi",
+    209 : "arme",
+    116 : "au",
+    204 : "abordage",
+    225 : "abey",
+    401 : "an",
+    500 : "assen",
+    53 : "avee",
+    104 : "avis",
+    223 : "avans",
+    111 : "aquisision",
+    82 : "authorite",
+    123 : "auveemens",
+    71 : "at"
   };
   </script>
 </head>
 
 <body>
+  <div id="cipher"></div>
   <input id="entry">
-  <button id="submit">Submit</button>
+  <button id="submit">Decode</button>
   <p id="result"></p>
 
   <script>
     $(document).ready(function() {
-      $('#result').text(cipher[6]);
+      $.each(cipher, function(key, value) {
+        $('#cipher').append('<div class="pair">' + key + ' : ' + value + '</div>');
+      });
     });
     
     $('#submit').click(function() {
