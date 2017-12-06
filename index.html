@@ -1,26 +1,33 @@
 <!doctype html>
 <html>
 <head>
-<script
-  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
-  crossorigin="anonymous"></script>
-<script>
-var cipher = {
-  6 : "ab",
-  91 : "ac"
-};
-</script>
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+    crossorigin="anonymous"></script>
+  <script>
+  var cipher = {
+    6 : "ab",
+    91 : "ac"
+  };
+  </script>
 </head>
 
 <body>
+  <form>
+    <input id="entry">
+    <button id="submit">
+  </form>
+  <span id="result"></span>
 
-<span id="result"></span>
-
-<script>
-$(document).ready(function() {
-  $('#result').text(cipher[6]);
-});
-</script>
+  <script>
+    $(document).ready(function() {
+      $('#result').text(cipher[6]);
+    });
+    
+    $('#submit').click(function() {
+      $('#result).append(cipher[$('#entry').val()] + ' ');
+    });
+  </script>
 </body>
 </html>
