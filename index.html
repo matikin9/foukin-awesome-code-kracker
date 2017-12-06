@@ -1,17 +1,27 @@
 <!doctype html>
 <html>
 <head>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Tangerine" rel="stylesheet">
   <style>
-   #cipher {
-     margin: 20px 0px;
-   }
-    .pair {
-      display: inline-block;
-      min-width: 200px;
-      padding: 10px;
-      border: solid #ccc 1px;
-      vertical-align: middle;
-    }
+  
+  body {
+    font-family: Montserrat;
+    font-size: 14px;
+  }
+  
+  #cipher {
+    margin: 20px 0px;
+  }
+  
+  .pair {
+    display: inline-block;
+    min-width: 200px;
+    padding: 10px;
+    margin: 0px 5px 5px 0px;
+    border: solid #888 1px;
+    color: #888;
+    vertical-align: middle;
+  }
   </style>
   <script
     src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -77,9 +87,11 @@
         $('#notification').text('Please enter a valid number!');
       } else {
         $('#result').append(cipher[num] + ' ');
-        $('#entry').val('');
         $('#notification').text('');
       }
+
+      $('#entry').val('');
+      $('#entry').focus();
     }
   </script>
 </body>
