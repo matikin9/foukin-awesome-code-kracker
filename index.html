@@ -49,6 +49,7 @@
   <div id="cipher"></div>
   <input id="entry">
   <button id="submit">Decode</button>
+  <p id="notification"></p>
   <p id="result"></p>
 
   <script>
@@ -59,9 +60,27 @@
     });
     
     $('#submit').click(function() {
-      $('#result').append(cipher[$('#entry').val()] + ' ');
-      $('#entry').val('');
+      decode();
     });
+    
+    $('#entry').keypress(function(e) {
+      if ( e.which == 13 ) {
+        e.preventDefault();
+        decode();
+      }
+      
+    });
+    
+    function decode() {
+      var num = $('#entry').val().trim();
+      if (isNaN(num) || !(num in cipher)) {
+        $('#notification').text('Please enter a valid number!');
+      } else {
+        $('#result').append(cipher[num] + ' ');
+        $('#entry').val('');
+        $('#notification').text('');
+      }
+    }
   </script>
 </body>
 </html>
