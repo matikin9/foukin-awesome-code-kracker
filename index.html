@@ -2,9 +2,12 @@
 <html>
 <head>
   <style>
+   #cipher {
+     margin: 20px 0px;
+   }
     .pair {
-      display: inline;
-      width: 200px;
+      display: inline-block;
+      min-width: 200px;
       padding: 10px;
       border: solid #ccc 1px;
       vertical-align: middle;
@@ -57,6 +60,7 @@
     
     $('#submit').click(function() {
       $('#result').append(cipher[$('#entry').val()] + ' ');
+      $('#entry').val('');
     });
   </script>
 </body>
