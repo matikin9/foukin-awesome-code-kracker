@@ -3,18 +3,58 @@
 <head>
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Tangerine" rel="stylesheet">
   <style>
+  /* Colors
+  B24542 red
+  FF8784 pink
+  FEFFCA cream
+  0074CC blue
+  7498B2 light blue
+  */
+  
   
   body {
     font-family: Montserrat;
     font-size: 14px;
   }
   
+  button {
+    background-color: #B24542;
+    color: #FEFFCA;
+    border-radius: 5px;
+    border: 0;
+    padding: 9px;
+    font-family: Montserrat;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  input {
+    height: 34px;
+    border-radius: 5px;
+    border: solid 1px #888;
+    font-family: Montserrat;
+    font-size: 14px;
+    padding: 0 10px;
+  }
+  
+  strong {
+    color: #B24542;
+  }
+  
   #cipher {
     margin: 20px 0px;
+    display: none;
+  }
+  
+  #cipher-min {
+    font-size: small;
+    text-decoration: underline;
+    cursor: pointer;
+    color: #0074CC;
   }
   
   #notification {
-    color: #B62943;
+    color: #B24542;
   }
   
   .pair {
@@ -28,8 +68,8 @@
   }
   </style>
   <script
-    src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
   <script>
   var cipher = {
@@ -60,9 +100,30 @@
 </head>
 
 <body>
+  <a href="https://github.com/matikin9/foukin-awesome-code-kracker" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>
+  <div>
+  <h1>Welcome to the <strong>Foukin Awesome Code Kracker</strong></h1>
+  
+    <p>Roland-Michel Barrin de La Galissoniere, the Marquis de La Galissoniere, was governor of New France from 1747 to 1749.</p>
+    
+    <p>The Huntington Library's archive contains boxes of the governor's letters, some of which are encoded.  The cipher was also found within the boxes.  The cipher contains over 300 coded words and vowel/consonant syllable combinations in this <a href="https://en.wikipedia.org/wiki/Polygraphic_substitution">polygraphic substitution cipher</a>.  This project was created to facilitate the decoding of the governor's letters.</p>
+    
+    <h2>Team</h2>
+    
+    <p><strong>Roya Fouladi</strong> - Researcher and explorer extraordinaire, searcher of a lost French fort.</p>
+    
+    <p><strong>Nina Kin</strong> - Code monkey and dabbler in the computer sciences.</p>
+  </div>
+  
+  <h2>Cipher <span id="cipher-min">(show)</span></h2>
+  <div id="cipher-dots">. . .</div>
   <div id="cipher"></div>
+  
+  
+  <h2>Decode</h2>
   <input id="entry">
   <button id="submit">Decode</button> <button id="delete">&lt;&lt; Remove Last</button>
+  
   <p id="notification"></p>
   <p id="result"></p>
 
@@ -71,6 +132,17 @@
       $.each(cipher, function(key, value) {
         $('#cipher').append('<div class="pair">' + key + ' : ' + value + '</div>');
       });
+    });
+    
+    $('#cipher-min').click(function() {
+      $('#cipher').slideToggle(300);
+      $('#cipher-dots').toggle();
+      
+      if ($('#cipher-min').text() == '(show)') {
+        $('#cipher-min').text('(hide)');
+      } else {
+        $('#cipher-min').text('(show)');
+      }
     });
     
     $('#submit').click(function() {
