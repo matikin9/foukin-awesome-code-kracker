@@ -1,2 +1,4 @@
 # french-cipher
-Cipher found in a box of the governor's letters at the Huntington Library's archives.  There are over 300 coded words and vowel/consonant combinations - a polygraphic substitution cipher.
+Roland-Michel Barrin de La Galissonière, the Marquis de La Galissonière, was governor of New France from 1747 to 1749.
+
+The Huntington Library's archive contains boxes of the governor's letters, some of which are encoded.  The cipher was also found.  There are over 300 coded words and vowel/consonant syllable combinations in this [polygraphic substitution cipher](https://en.wikipedia.org/wiki/Polygraphic_substitution).  This project was created to facilitate the decoding of the governor's letters.
