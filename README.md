@@ -4,6 +4,6 @@ The Huntington Library's archive contains boxes of letters from a governor of Fr
 
 ## Team
 
-*Roya Fouladi* - Researcher and explorer extraordinaire, searcher of a lost French fort.
+*Roya Fouladi* - Researcher and explorer extraordinaire, seeker of a lost French fort known as <a href="https://en.wikipedia.org/wiki/Fort_de_Cavagnial" target="_blank">Fort Cavagnal or Fort la Trinite</a>.
 
 *Nina Kin* - Code monkey and dabbler in the computer sciences.
