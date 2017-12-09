@@ -1,0 +1,62 @@
+/* Colors
+B24542 red
+FF8784 pink
+FEFFCA cream
+0074CC blue
+7498B2 light blue
+*/
+
+body {
+  font-family: Montserrat;
+  font-size: 14px;
+}
+
+button {
+  background-color: #B24542;
+  color: #FEFFCA;
+  border-radius: 5px;
+  border: 0;
+  padding: 9px;
+  font-family: Montserrat;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+input {
+  height: 34px;
+  border-radius: 5px;
+  border: solid 1px #888;
+  font-family: Montserrat;
+  font-size: 14px;
+  padding: 0 10px;
+}
+
+strong {
+  color: #B24542;
+}
+
+#cipher {
+  margin: 20px 0px;
+  display: none;
+}
+
+#cipher-min {
+  font-size: small;
+  text-decoration: underline;
+  cursor: pointer;
+  color: #0074CC;
+}
+
+#notification {
+  color: #B24542;
+}
+
+.pair {
+  display: inline-block;
+  min-width: 200px;
+  padding: 10px;
+  margin: 0px 5px 5px 0px;
+  border: solid #888 1px;
+  color: #888;
+  vertical-align: middle;
+}
