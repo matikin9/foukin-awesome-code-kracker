@@ -119,7 +119,7 @@ var cipher = {
   172 : "sauvage",
   182 : "fin",
   192 : "neutre",
-  103 : "doremavans",
+  103 : "dorenavant",
   113 : "gouverne",
   123 : "autremans",
   133 : "gis",
