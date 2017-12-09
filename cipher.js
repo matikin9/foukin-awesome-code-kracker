@@ -121,7 +121,7 @@ var cipher = {
   192 : "neutre",
   103 : "dorenavant",
   113 : "gouverne",
-  123 : "autremans",
+  123 : "autremant",
   133 : "gis",
   143 : "dans",
   153 : "gu",
