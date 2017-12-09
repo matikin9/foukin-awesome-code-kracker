@@ -10,7 +10,7 @@ var cipher = {
   81 : "du",
   91 : "ac",
   2 : "de",
-  12 : "leuv",
+  12 : "leur",
   22 : "eb",
   32 : "ha",
   42 : "ment",
