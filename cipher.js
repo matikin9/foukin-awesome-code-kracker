@@ -163,7 +163,7 @@ var cipher = {
   117 : "lu",
   127 : "les Portugais",
   137 : "union",
-  147 : "ois",
+  147 : "oit",
   157 : "mauvais",
   167 : "Dannemark",
   177 : "quel",
