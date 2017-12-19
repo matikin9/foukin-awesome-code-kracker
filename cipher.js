@@ -69,7 +69,7 @@ var cipher = {
   77 : "tempr",
   87 : "notre",
   97 : "z",
-  8 : "&/ou/es",
+  8 : "&/ou/et",
   18 : "vie",
   28 : "zele",
   38 : "service",
